@@ -11,7 +11,7 @@ Para entender la diferencia, pensemos en un restaurante:
 
 ### Cuándo usar cada uno:
 - **Servidor Web **: Cuando solo necesitas servir contenido estático (HTML, imágenes, CSS, JS) o actuar como proxy inverso.
-  **Ejemplos:** Nginx, Apache,vite
+  **Ejemplos:** Nginx, Apache,vite, redux
 - **Servidor de Aplicaciones **: Cuando tu aplicación requiere procesamiento de datos, acceso a bases de datos, autenticación.
   **Ejemplos:** Tomcat, JBoss, .NET Core, Node.js)
 
@@ -21,22 +21,29 @@ Si tenés un blog estático, con HTML y CSS, un servidor web como Nginx es sufic
 ---
 
 
-## 2. ¿Por qué usar AWS Lambda en lugar de AWS EC2?
+## 2. AWS y Servicios en la Nube:
+¿Para qué usarías AWS Lambda en lugar de AWS EC2? Da un ejemplo de uso.
 
-AWS Lambda y AWS EC2 son dos formas diferentes de ejecutar código en la nube:
+AWS Lambda y AWS EC2 son dos formas con las cuales podemos desplagar y ejecutar codigo en la nuve con AMAZON.
+
 - **AWS EC2 (Elastic Compute Cloud)**: Es como alquilar un apartamento, lo configurás y lo mantenés encendido para lo que necesités.
+- 
 - **AWS Lambda**: Es como pedir un taxi, solo pagás cuando lo usás. No tenés que preocuparte por mantenimiento ni infraestructura.
 
-### Ejemplo de uso:
+Las diferencias del uno al otro, es que  AWS EC2 : es como tener un bacgroind services corriendo cada cierto tiempo y se baja cuando no se necesite.
+mientras que  AWS Lambda es como una funcion *servelest* que se ejecuta solo cuando se necesita el recurso disparada por un evento, es decir que se utiliza bajo de manda, por lo que el nivel de recursos siempre varian en funcion de su uso. mientras que AWS EC2, se asigan un recurso inicial y este se mantiene constante o crese a medida que procesa.
+
+### Ejemplo :
 Si tenés una aplicación web que necesita un backend corriendo constantemente, EC2 es la opción ideal. Pero si solo necesitás ejecutar código en eventos específicos (como procesar imágenes cuando un usuario las sube), AWS Lambda es mejor porque solo se ejecuta cuando es necesario y reduce costos.
 
-Ejemplo práctico:
 - **AWS Lambda**: Un sistema de notificaciones por correo electrónico. Cada vez que un usuario se registra, Lambda envía un correo sin necesidad de un servidor corriendo todo el tiempo.
 - **AWS EC2**: Un servidor web para una tienda en línea que está siempre disponible para recibir pedidos.
 
 ---
 
-## 3. Diferencia entre SQL y NoSQL
+## 3. Bases de Datos y APIs:
+Explica brevemente la diferencia entre SQL y NoSQL. ¿En qué casos utilizarías MongoDB en
+lugar de MySQL?
 
 - **SQL (Ej: MySQL, PostgreSQL, SQL Server)**: Usa tablas y relaciones estructuradas. Ideal cuando tenés datos bien organizados, como registros de clientes y pedidos.
 - **NoSQL (Ej: MongoDB, Cassandra, Redis)**: No usa tablas tradicionales, sino documentos o claves-valor. Es mejor cuando los datos son más dinámicos y no necesitan una estructura fija.
