@@ -21,6 +21,6 @@ Contenido de archivos
 ## Sección 3:
 ([Seccion-3.md](https://github.com/jhoney787813/sr_developer_test/blob/main/seccion_tres.md))
 
-
+---
 
 [Jhon E -> GitHub Profile](https://github.com/jhoney787813/)
