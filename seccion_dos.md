@@ -30,17 +30,16 @@
       ### 5. Ejecutar el script
       Para correr el script, simplemente ejecutá:
       ```sh
-      python sr_developer.py
-
+                  python sr_developer.py
+                  python lambda_function.py
       ```
-
 
 
 ## 1. Desarrollo en Python:
 Crea una función en Python que reciba una lista de números y devuelva el promedio de esos
 números.
  
- ```sh
+ ```python
        def calculate_average(numbers):
       if not numbers:
           return 0 
@@ -89,11 +88,17 @@ Ejemplo práctico:
 Escribe una función Lambda sencilla en Python que reciba un mensaje de una cola SQS y lo
 imprima en la consola.
 
-
-
-
-# Pasos para construir y ejecutar el proyecto en Python
-
-Si querés construir y ejecutar este proyecto de manera local, seguí estos pasos:
+ ```python
+                  import json
+                  
+                  def lambda_handler(event, context):
+                      for record in event['Records']:
+                          message = json.loads(record['body'])
+                          print(f"Received message: {message}")
+                      return {
+                          'statusCode': 200,
+                          'body': 'Message processed successfully'
+                      }
+ ```
 
 
