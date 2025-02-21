@@ -3,7 +3,11 @@
 
 ## Parte 2: Ejercicios Prácticos (45 minutos)
 
+¿Qué mejoras aplicarías para optimizar el código?
+¿Qué consideraciones de seguridad tomarías en cuenta al trabajar con AWS?
+
 Codigo Original:
+
  ```python
           import boto3
           def upload_file_to_s3(filename, bucket):
@@ -12,8 +16,8 @@ Codigo Original:
 
  ```
 
-
 Podemos aplicar los principios *SOLID* para separar responsabilidades y hacer el codigo reutilizable, tambien tener un manejo adecuado como trabajamos con archivos y esto puede hacerse asincrono es recomendado implementar un manejo de errores para evitar desbordes en nuestra aplicación. y tambien para teber un manejo adecuado de nuestro BAM de operaciones.
+
  ```python
         import boto3
         import logging
@@ -37,4 +41,11 @@ Podemos aplicar los principios *SOLID* para separar responsabilidades y hacer el
                 logging.error(f"Error al subir {filename} a {bucket}: {e}")
                 return False
 
+ ```
+
+
+Ahora para mejorar la seguridad de transacción de los archivos, podriamos envia el archivo encriptado en ligar de enviar el archivo en plano.
+
  ```python
+     s3.upload_file(filename, bucket, filename, ExtraArgs={'ServerSideEncryption': 'AES256'})
+ ```
