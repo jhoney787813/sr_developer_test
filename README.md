@@ -2,6 +2,8 @@
 
 # Prueba Técnica para Desarrollador Senior 2025
 
+El propósito de este repositorio es consolidar las actividades que se me piden realizar para demostrar los conocimientos como especialista Backend.
+
 Esta prueba técnica está diseñada para evaluar las habilidades y conocimientos esenciales para el rol de Desarrollador Senior Backend. se busca medir la capacidad del candidato en áreas clave como:
 
 Desarrollo en Python: Creación de funciones eficientes y reutilizables.
