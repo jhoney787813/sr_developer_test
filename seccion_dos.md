@@ -57,7 +57,6 @@ Resultado Ejecución:
 
 
 
-
 ## 2. Integración con Base de Datos SQL:
 Escribe una consulta SQL que devuelva todos los usuarios cuyo correo electrónico termine en
 "@gmail.com" de una tabla de usuarios (id, nombre, correo).
